@@ -22,11 +22,11 @@
     </template>
   </a-progress>
   <div class="center_pannel">
-      <img class="status_img" :src="percent==0?image1:percent<50?image2:image3" mode="" />
+      <img class="status_img" :src="percent==0?image1:percent<50?image3:image2" mode="" />
       <div class="subs">
         <p class="status_c">检测状态</p>
         <p :class="[percent==0?'status_0':percent<50?'status_50':'status_100']">
-          {{ percent==0?'未知':percent<50?'正常':'异常' }}
+          {{ percent==0?'未知':percent<50?'正常':'报警' }}
         </p>
       </div>
   </div>
